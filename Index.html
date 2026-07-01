@@ -1,0 +1,104 @@
+<div style="display: flex; flex-direction: column; height: 100vh; background-color: #0b0f19; color: #f8fafc; font-family: system-ui, -apple-system, sans-serif; overflow: hidden;">
+    
+    <!-- SYSTEM TOP BAR: Critical Shift Metrics -->
+    <div style="background-color: #111827; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937; box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);">
+        <div style="display: flex; gap: 40px; font-size: 1.1rem; font-weight: 500;">
+            <div>Active Fleet Units: <strong style="color:#10b981;">14 Online</strong></div>
+            <div>Pending Booking Requests: <strong style="color:#ef4444;">2 Unassigned</strong></div>
+        </div>
+        <div style="font-size:0.9rem; color: #64748b; font-weight: bold; letter-spacing: 1px; text-transform: uppercase; background: #1e293b; padding: 6px 12px; border-radius: 4px;">
+            Primary Console: Shift Pipeline
+        </div>
+    </div>
+
+    <!-- 4-COLUMN OPERATIONAL TRACKS: Takes full monitor width -->
+    <div style="display: flex; flex: 1; padding: 25px; gap: 20px; overflow-x: auto; background-color: #0f172a;">
+
+        <!-- LANE 1: UNASSIGNED/PENDING QUEUE -->
+        <div style="flex: 1; background-color: #1e293b; border-radius: 8px; display: flex; flex-direction: column; border: 1px solid #334155; min-width: 320px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);">
+            <div style="padding: 15px 20px; border-bottom: 3px solid #ef4444; font-weight: bold; font-size: 1.1rem; color: #fca5a5; background: rgba(239, 68, 68, 0.03); display: flex; justify-content: space-between; align-items: center;">
+                <span>UNASSIGNED CALLS</span>
+                <span style="background: #ef4444; color: white; font-size: 0.85rem; padding: 2px 10px; border-radius: 20px;">2</span>
+            </div>
+            <div style="padding: 15px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 14px;">
+                
+                <!-- Card 1 (Unassigned Buffer) -->
+                <div style="background-color: #0f172a; padding: 18px; border-radius: 6px; border-left: 5px solid #ef4444; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.9rem; color: #94a3b8; font-weight: 600;">TRIP ID #5012</span>
+                        <span style="background: rgba(239, 68, 68, 0.1); color: #ef4444; padding: 2px 6px; font-size: 0.8rem; font-weight: bold; border-radius: 4px;">WAITING 4m</span>
+                    </div>
+                    <div style="font-size: 1.3rem; font-weight: bold; color: #fff; margin-bottom: 4px;">927 W Beech St</div>
+                    <div style="font-size: 1rem; color: #94a3b8; margin-bottom: 15px;">Caller: John Doe • (516) 555-0199</div>
+                    <button style="width: 100%; background: #3b82f6; hover:background:#2563eb; border: none; color: white; padding: 10px; font-weight: bold; font-size: 1rem; border-radius: 4px; cursor: pointer; transition: background 0.2s;">Quick Assign Unit</button>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LANE 2: DISPATCHED / EN ROUTE -->
+        <div style="flex: 1; background-color: #1e293b; border-radius: 8px; display: flex; flex-direction: column; border: 1px solid #334155; min-width: 320px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);">
+            <div style="padding: 15px 20px; border-bottom: 3px solid #f59e0b; font-weight: bold; font-size: 1.1rem; color: #fde047; background: rgba(245, 158, 11, 0.03); display: flex; justify-content: space-between; align-items: center;">
+                <span>EN ROUTE TO PICKUP</span>
+                <span style="background: #f59e0b; color: black; font-size: 0.85rem; padding: 2px 10px; border-radius: 20px; font-weight: bold;">1</span>
+            </div>
+            <div style="padding: 15px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 14px;">
+                
+                <!-- Card 2 (En Route State) -->
+                <div style="background-color: #0f172a; padding: 18px; border-radius: 6px; border-left: 5px solid #f59e0b; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.9rem; color: #94a3b8; font-weight: 600;">TRIP ID #4998</span>
+                        <span style="background: #f59e0b; color: black; padding: 2px 8px; font-size: 0.85rem; font-weight: bold; border-radius: 4px;">CAR 14</span>
+                    </div>
+                    <div style="font-size: 1.3rem; font-weight: bold; color: #fff; margin-bottom: 4px;">1045 Beech St</div>
+                    <div style="font-size: 1.0rem; color: #cbd5e1; margin-bottom: 10px;">➔ Drop: LIRR Station</div>
+                    <div style="border-top: 1px solid #334155; padding-top: 10px; display: flex; justify-content: space-between; font-size: 0.9rem; color: #64748b;">
+                        <span>Driver: Thompson</span>
+                        <span style="color: #f59e0b; font-weight: 500;">ETA 3 mins</span>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+        <!-- LANE 3: DRIVER ON SCENE -->
+        <div style="flex: 1; background-color: #1e293b; border-radius: 8px; display: flex; flex-direction: column; border: 1px solid #334155; min-width: 320px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);">
+            <div style="padding: 15px 20px; border-bottom: 3px solid #3b82f6; font-weight: bold; font-size: 1.1rem; color: #93c5fd; background: rgba(59, 130, 246, 0.03); display: flex; justify-content: space-between; align-items: center;">
+                <span>DRIVER ON SCENE</span>
+                <span style="background: #3b82f6; color: white; font-size: 0.85rem; padding: 2px 10px; border-radius: 20px;">0</span>
+            </div>
+            <div style="padding: 15px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 14px;">
+                <!-- Content updates live over WebSockets -->
+                <div style="text-align: center; color: #475569; margin-top: 40px; font-style: italic; font-size: 1rem;">No vehicles currently waiting</div>
+            </div>
+        </div>
+
+        <!-- LANE 4: PASSENGER ON BOARD (POB) -->
+        <div style="flex: 1; background-color: #1e293b; border-radius: 8px; display: flex; flex-direction: column; border: 1px solid #334155; min-width: 320px; box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.3);">
+            <div style="padding: 15px 20px; border-bottom: 3px solid #10b981; font-weight: bold; font-size: 1.1rem; color: #6ee7b7; background: rgba(16, 185, 129, 0.03); display: flex; justify-content: space-between; align-items: center;">
+                <span>PASSENGER ON BOARD (POB)</span>
+                <span style="background: #10b981; color: white; font-size: 0.85rem; padding: 2px 10px; border-radius: 20px;">1</span>
+            </div>
+            <div style="padding: 15px; flex: 1; overflow-y: auto; display: flex; flex-direction: column; gap: 14px;">
+                
+                <!-- Card 3 (Active Ride / Shared-Ride Visualized) -->
+                <div style="background-color: #0f172a; padding: 18px; border-radius: 6px; border-left: 5px solid #10b981; box-shadow: 0 4px 6px rgba(0,0,0,0.2);">
+                    <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 10px;">
+                        <span style="font-size: 0.9rem; color: #94a3b8; font-weight: 600;">TRIP ID #4990</span>
+                        <span style="background: #22c55e; color: black; padding: 2px 8px; font-size: 0.85rem; font-weight: bold; border-radius: 4px;">CAR 22</span>
+                    </div>
+                    <!-- Big typography dropoff target -->
+                    <div style="font-size: 0.9rem; color: #64748b; font-weight: bold; text-transform: uppercase;">HEADING TO:</div>
+                    <div style="font-size: 1.3rem; font-weight: bold; color: #fff; margin-bottom: 12px; color: #00ccff;">Allegria Hotel</div>
+                    
+                    <!-- Shared ride badge overlay inside the card -->
+                    <div style="background: rgba(59, 130, 246, 0.1); border: 1px dashed #3b82f6; padding: 8px; border-radius: 4px; font-size: 0.9rem; color: #93c5fd; text-align: center; font-weight: 500;">
+                        👤 Shared Ride: 2 Fares Matched
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+  </div>
