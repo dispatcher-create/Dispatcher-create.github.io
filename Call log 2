@@ -1,0 +1,92 @@
+<div style="display: flex; height: 100vh; background-color: #0b0f19; color: #f8fafc; font-family: system-ui, sans-serif; overflow: hidden;">
+
+    <div style="width: 380px; background-color: #111827; border-right: 1px solid #1f2937; display: flex; flex-direction: column; box-shadow: 2px 0 10px rgba(0,0,0,0.5); z-index: 10;">
+        
+        <div style="padding: 15px; background: #1e293b; border-bottom: 2px solid #3b82f6;">
+            <div style="font-size: 0.8rem; color: #94a3b8; text-transform: uppercase; font-weight: bold;">Incoming Caller ID</div>
+            <div style="font-size: 1.2rem; font-weight: bold; color: #fff;">(516) 555-0199</div>
+            <div style="font-size: 0.9rem; color: #93c5fd;">Jane Doe • Account #8821</div>
+        </div>
+
+        <div style="padding: 20px; flex: 1; overflow-y: auto;">
+            <form style="display: flex; flex-direction: column; gap: 15px;">
+                
+                <input type="hidden" name="city" value="Long Beach">
+                <input type="hidden" name="state" value="NY">
+
+                <div>
+                    <label style="font-size: 0.85rem; color: #94a3b8; font-weight: bold; margin-bottom: 5px; display: block;">Pick-up Address</label>
+                    <input type="text" placeholder="e.g. 123 Main St" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 4px; box-sizing: border-box; font-size: 1rem;">
+                </div>
+
+                <div>
+                    <label style="font-size: 0.85rem; color: #94a3b8; font-weight: bold; margin-bottom: 5px; display: block;">Drop-off Address (Optional)</label>
+                    <input type="text" placeholder="Destination" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 4px; box-sizing: border-box; font-size: 1rem;">
+                </div>
+
+                <div style="display: flex; gap: 10px;">
+                    <div style="flex: 1;">
+                        <label style="font-size: 0.85rem; color: #94a3b8; font-weight: bold; margin-bottom: 5px; display: block;">Time</label>
+                        <input type="time" style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 4px; box-sizing: border-box;">
+                    </div>
+                    <div style="flex: 1;">
+                        <label style="font-size: 0.85rem; color: #94a3b8; font-weight: bold; margin-bottom: 5px; display: block;">Car Type</label>
+                        <select style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 4px; box-sizing: border-box;">
+                            <option>Sedan</option>
+                            <option>Minivan</option>
+                            <option>SUV</option>
+                        </select>
+                    </div>
+                </div>
+
+                <div>
+                    <label style="font-size: 0.85rem; color: #94a3b8; font-weight: bold; margin-bottom: 5px; display: block;">Assign Unit</label>
+                    <select style="width: 100%; padding: 10px; background: #0f172a; border: 1px solid #334155; color: white; border-radius: 4px; box-sizing: border-box;">
+                        <option>ODL Suggest (Auto)</option>
+                        <option>Send to All</option>
+                        <option>Car 02</option>
+                        <option>Car 14</option>
+                        <option>Car 33</option>
+                    </select>
+                </div>
+
+                <button type="button" style="margin-top: 10px; background: #10b981; border: none; color: white; padding: 12px; font-weight: bold; font-size: 1.1rem; border-radius: 4px; cursor: pointer;">
+                    🚀 DISPATCH FARE
+                </button>
+            </form>
+        </div>
+    </div>
+
+    <div style="flex: 1; display: flex; flex-direction: column; overflow: hidden;">
+        
+        <div style="background-color: #111827; padding: 15px 30px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid #1f2937;">
+            <div style="display: flex; gap: 40px; font-size: 1.1rem; font-weight: 500;">
+                <div>Active Fleet Units: <strong style="color:#10b981;">14 Online</strong></div>
+            </div>
+            <div style="font-size:0.9rem; color: #64748b; font-weight: bold; letter-spacing: 1px; text-transform: uppercase;">
+                Live Board
+            </div>
+        </div>
+
+        <div style="display: flex; flex: 1; padding: 20px; gap: 15px; overflow-x: auto; background-color: #0f172a;">
+            
+            <div style="flex: 1; background-color: #1e293b; border-radius: 8px; border: 1px solid #334155; min-width: 280px; display: flex; flex-direction: column;">
+                <div style="padding: 12px; border-bottom: 3px solid #ef4444; font-weight: bold; color: #fca5a5;">UNASSIGNED</div>
+                </div>
+
+            <div style="flex: 1; background-color: #1e293b; border-radius: 8px; border: 1px solid #334155; min-width: 280px; display: flex; flex-direction: column;">
+                <div style="padding: 12px; border-bottom: 3px solid #f59e0b; font-weight: bold; color: #fde047;">EN ROUTE</div>
+                </div>
+
+            <div style="flex: 1; background-color: #1e293b; border-radius: 8px; border: 1px solid #334155; min-width: 280px; display: flex; flex-direction: column;">
+                <div style="padding: 12px; border-bottom: 3px solid #3b82f6; font-weight: bold; color: #93c5fd;">ON SCENE</div>
+                </div>
+
+            <div style="flex: 1; background-color: #1e293b; border-radius: 8px; border: 1px solid #334155; min-width: 280px; display: flex; flex-direction: column;">
+                <div style="padding: 12px; border-bottom: 3px solid #10b981; font-weight: bold; color: #6ee7b7;">POB</div>
+                </div>
+
+        </div>
+    </div>
+
+</div>
